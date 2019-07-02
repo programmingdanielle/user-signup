@@ -15,6 +15,10 @@ table {
     border-radius: 8px;
 }
 
+.error {
+    color: red;
+}
+
 input[type="submit"] {
     display: block;
     font-size: 1em;
