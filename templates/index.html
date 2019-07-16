@@ -11,33 +11,51 @@
     </td>
         <td><input name="username" type="text" value={{username}}>
     </td>
+    <td><div class="error">
+        {{error}}
+        {{user_blank}}
+        {{field_blank}}
+        {{user_long_error}}
+        {{user_short_error}}
+    </div></td>
     </tr>
 
     <tr>
         <td><label for="password">Password:</label></td>
         <td><input name="password" type="password"></td>
+        <td><div class="error">{{field_blank}}
+                {{pwwerror}}
+                {{pwerror}}
+                {{pass_blank}}
+                {{pw_short_error}}
+                {{pw_long_error}}
+        </div></td>
     </tr>
     
     <tr>
         <td><label for="verify">Verify Password:</label></td>
         <td><input name="verify" type="password"></td>
+        <td><div class="error">{{field_blank}}</div></td>
     </tr>
     
     <tr>
         <td><label for="email">Email (optional):</label></td>
         <td><input name="email" value="{{email}}"></td>
+        <td>
+            <div class="error">
+                {{emerror}}
+                {{extra_email_error}}
+                {{missing_email_error}}
+                {{em_too_long}}
+                {{em_too_short}}
+
+            </div>
+        </td>
     </tr>
         
     <tr>
         <td colspan="2"><br><input type="submit">
         <BR>
-            {% if error %}
-            <p class="error">{{error}}</p>
-            {% endif %}
-
-            {% if pwerror %}
-            <p class="error">{{pwerror}}</p>
-            {% endif %}
     </td>
     </tr>
 </form>
